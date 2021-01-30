@@ -1,2 +1,0 @@
-# jitter
-Socail media app
