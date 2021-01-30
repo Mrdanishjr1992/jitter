@@ -1,0 +1,62 @@
+{
+	"name": "jitter",
+	"version": "1.0.0",
+	"description": "Social Media App",
+	"main": "app.js",
+	"dependencies": {
+		"@testing-library/jest-dom": "^5.11.9",
+		"@testing-library/react": "^11.2.3",
+		"@testing-library/user-event": "^12.6.2",
+		"react": "^17.0.1",
+		"react-dom": "^17.0.1",
+		"react-scripts": "4.0.1",
+		"web-vitals": "^0.2.4",
+		"cookie-parser": "~1.4.4",
+		"debug": "~2.6.9",
+		"ejs": "~2.6.1",
+		"express": "~4.16.1",
+		"http-errors": "~1.6.3",
+		"morgan": "~1.9.1"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"start-server": "node ./bin/www",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Mrdanishjr1992/jitter.git"
+	},
+	"keywords": [
+		"jitter",
+		"media",
+		"social",
+		"app"
+	],
+	"author": "Mohamed Abdulah and Dream-Team.",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Mrdanishjr1992/jitter/issues"
+	},
+	"homepage": "https://github.com/Mrdanishjr1992/jitter#readme"
+}
