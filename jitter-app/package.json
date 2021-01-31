@@ -21,6 +21,7 @@
 	"scripts": {
 		"start": "react-scripts start",
 		"start-server": "node ./bin/www",
+		"watch": "nodemon ./bin/www",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
