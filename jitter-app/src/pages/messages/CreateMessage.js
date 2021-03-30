@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function CreateMessage() {
+function CreateMessage({ setRefresh }) {
   const [messageForm, setMessageForm] = useState({
     message: '',
     group: {},
@@ -20,12 +20,12 @@ function CreateMessage() {
     event.preventDefault();
     const obj = {
       ...messageForm,
-    //   user: currentUser._id,
-    //   group: currentGroup._id,
-    //   chat: currentChat._id,
+      //   user: currentUser._id,
+      //   group: currentGroup._id,
+      //   chat: currentChat._id,
     };
-
-    fetch('https://jitter-api.herokuapp.com/message', {
+    console.log(obj);
+    fetch('https://jitter-api.herokuapp.com/message/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -33,6 +33,7 @@ function CreateMessage() {
       body: JSON.stringify(obj),
     })
       .then((response) => {
+        console.log(response);
         return response.json();
       })
       .then((data) => {
@@ -40,28 +41,24 @@ function CreateMessage() {
         setMessageForm({
           message: '',
         });
-        // setRefresh(data.message);
+        setRefresh(data.message);
       })
       .catch((err) => console.log(err));
   }
 
   return (
-    <div className='card-footer'>
-      <div className='input-group mb-3 text-white'>
-        <textarea
+    <div>
+      <div>
+        <input
           name='text'
           className='form-control type_msg'
           placeholder='Type your message...'
           value={messageForm.message}
           onChange={handleChange}
         />
-        <span
-          onClick={handleSubmit}
-          type='submit'
-          className='input-group-text send_btn'
-        >
-          <i className='fas fa-location-arrow'></i>
-        </span>
+        <button onClick={(event) => handleSubmit(event)} type='submit'>
+          Post
+        </button>
       </div>
     </div>
   );
