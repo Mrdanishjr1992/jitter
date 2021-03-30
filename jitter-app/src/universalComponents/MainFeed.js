@@ -1,14 +1,12 @@
 import React from 'react';
-import CreateMessage from '../'
+import CreateMessage from '../pages/messages/CreateMessage'
 const MainFeed = () => {
   return (
     <div className='main-feed'>
       <span>
         <strong>#Feed-Name</strong>
       </span>
-      <p className='feed-card'>
-        Whats new
-      </p>
+      <CreateMessage />
       <button>post</button>
       <p className='feed-card'>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
