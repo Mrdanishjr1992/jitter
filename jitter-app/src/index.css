@@ -1,41 +1,63 @@
 body {
-	margin: 0;
-	padding: 0;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-		sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .title {
-	padding: 10px;
-	margin: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.mainCont {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  height: 80%;
+  border: solid black 2px;
+  margin: 10px;
 }
 
 .sidecar {
-	display: flex;
-	padding: 10px;
-	margin: 10px;
-	flex-direction: column;
-	width: 150px;
-	height: 100vh;
-	border: black solid 2px;
-	border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px;
+  width: 20%;
+  height: 100%;
+  border: black solid 2px;
+  border-radius: 1em;
 }
 
 .main-feed {
-	flex-direction: column;
-	float: right;
-	width: 50%;
-	height: 100vh;
-	border: black solid 2px;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  border: black solid 2px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.sideGroup {
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px;
+  width: 30%;
+  height: 100%;
+  border: black solid 2px;
 }
 
 .feed-card {
-	flex-direction: column;
-	height: 100px;
-	border: black solid 2px;
-	border-radius: 1em;
-	padding: 10px;
+  flex-direction: column;
+  height: 100px;
+  border: black solid 2px;
+  border-radius: 1em;
+  padding: 10px;
+  margin: 10px;
 }
+
+

@@ -1,13 +1,10 @@
-import MainFeed from './universalComponents/MainFeed';
-import SideCar from './universalComponents/SideCar';
+import React, { useState } from 'react';
+import Routes from './config/routes';
 
 function App() {
-	return (
-		<div>
-			<SideCar />
-			<MainFeed />
-		</div>
-	);
+  const [token, setToken] = useState(null);
+
+  return <Routes token={token} setToken={setToken} />;
 }
 
 export default App;
