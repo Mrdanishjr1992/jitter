@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const SideCar = () => {
   return (
@@ -19,7 +20,7 @@ const SideCar = () => {
             <a href='/#'>Messages</a>
           </li>
           <li>
-            <a href='/#'>Profile</a>
+            <Link to='/profile'>Profile</Link>
           </li>
         </nav>
       </aside>
