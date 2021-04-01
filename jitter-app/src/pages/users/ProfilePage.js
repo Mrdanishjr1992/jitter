@@ -16,7 +16,7 @@ function ProfilePage({ token }) {
       token: localStorage.getItem('token'),
     };
     if (token.token) {
-      fetch('https://jitter-api.herokuapp.com//users/profile', {
+      fetch('https://jitter-api.herokuapp.com/user/profile', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -24,16 +24,16 @@ function ProfilePage({ token }) {
         body: JSON.stringify(token),
       })
         .then((response) => {
-          console.log(response);
           if (response.status === 200) {
             return response.json();
           }
           setError(error);
         })
         .then((data) => {
+          console.log(data)
           if (!user) setUser(data.profile);
 
-          console.log('user', user);
+          // console.log('user', user);
         })
         .catch((err) => console.log(err));
     } else {
@@ -42,7 +42,8 @@ function ProfilePage({ token }) {
   }, [token, error, history, refresh, editCurrentUser]);
 
   function handleDelete() {
-    fetch(`https://evening-mesa-39907.herokuapp.com/users/${user._id}`, {
+    // Missing user_id and :id for delete in the backend
+    fetch(`https://jitter-api.herokuapp.com/user/delete`, {
       method: 'DELETE',
     })
       .then((response) => {
@@ -57,7 +58,7 @@ function ProfilePage({ token }) {
 
         localStorage.removeItem('token');
         // Redirect user profile page
-        history.push('/');
+        // history.push('/');
       })
       .catch((err) => setError(err.message));
   }

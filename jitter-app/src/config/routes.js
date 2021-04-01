@@ -7,6 +7,7 @@ import ProfilePage from '../pages/users/ProfilePage';
 import MainContainer from '../container/MainContainer';
 
 function Routes({ token, setToken }) {
+  console.log(token)
   return (
     <Switch>
       <Route exact path='/' component={MainContainer} />

@@ -19,7 +19,13 @@ const SideCar = () => {
             <a href='/#'>Messages</a>
           </li>
           <li>
-            <a href='/#'>Profile</a>
+            <a href='/profile'>Profile</a>
+          </li>
+          <li>
+            <a href='/login'>Login</a>
+          </li>
+          <li>
+            <a href='/register'>SignUp</a>
           </li>
         </nav>
       </aside>

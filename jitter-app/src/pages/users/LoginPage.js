@@ -22,11 +22,12 @@ function LoginPage({ setToken }) {
     }
 
     const userData = { email, password };
+    console.log(userData)
 
-    fetch('https://jitter-api.herokuapp.com/login', {
+    fetch('https://jitter-api.herokuapp.com/user/login', {
       method: 'POST',
       headers: {
-        'Content-type': 'application/json',
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(userData),
     })

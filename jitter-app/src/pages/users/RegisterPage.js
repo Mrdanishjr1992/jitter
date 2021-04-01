@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import './style.css';
 
 function RegisterPage() {
-  const [userName, setUserName] = useState('');
+  // const [userName, setUserName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordCheck, setPasswordCheck] = useState('');
@@ -15,7 +15,7 @@ function RegisterPage() {
   function handleSubmit(event) {
     event.preventDefault();
 
-    if (!userName || !email || !password || !passwordCheck) {
+    if (!email || !password || !passwordCheck) {
       return setError('All fields are required');
     }
 
@@ -25,9 +25,9 @@ function RegisterPage() {
     if (password.length < 4)
       return setError('The Password must be at least 4 characters long');
 
-    const newUser = { userName, email, password };
+    const newUser = {email, password};
 
-    fetch('https://jitter-api.herokuapp.com/users/create', {
+    fetch('https://jitter-api.herokuapp.com/user/', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
@@ -61,14 +61,14 @@ function RegisterPage() {
         </div>
         {error && <h2>{error} </h2>}
         <form onSubmit={handleSubmit}>
-          <input
+          {/* <input
             type='text'
             id='userName'
             name='userName'
             placeholder='username'
             value={userName}
             onChange={(event) => setUserName(event.target.value)}
-          />
+          /> */}
           <input
             type='email'
             id='email'
