@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import CreateMessage from '../pages/messages/CreateMessage';
-import MessageCard from '../pages/messages/MessageCard';
+import CreateMessage from './messages/CreateMessage';
+import MessageCard from './messages/MessageCard';
 
 const MainFeed = () => {
   const [messages, setMessages] = useState([]);
