@@ -52,18 +52,18 @@ export default function RegisterForm({ setWelcome, welcome }) {
       <form className='flex flex-col w-full' onSubmit={registerSubmit}>
         {error && <h2 className='text-red-700 text-center p-2'>{error}</h2>}
         {message && <h2 className='text-green-700'>{message}</h2>}
-        <div className='flex flex-col bg-green-400 text-black border-black border-2 p-2 m-2'>
-          <label htmlFor='username'>UserName</label>
+        <div className='flex flex-col bg-green-400 rounded text-black border-black border-2 p-2 m-2'>
+          <label htmlFor='email'>Email</label>
           <input
             type='text'
-            name='username'
-            id='username'
+            name='email'
+            id='email'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
         </div>
-        <div className='flex flex-col bg-green-400 text-black border-black border-2 p-2 m-2'>
+        <div className='flex flex-col bg-green-400 rounded text-black border-black border-2 p-2 m-2'>
           <label htmlFor='password'>Password</label>
           <input
             type='password'
@@ -74,7 +74,7 @@ export default function RegisterForm({ setWelcome, welcome }) {
             required
           />
         </div>
-        <div className='flex flex-col bg-green-400 text-black border-black border-2 p-2 m-2'>
+        <div className='flex flex-col bg-green-400 rounded text-black border-black border-2 p-2 m-2'>
           <label htmlFor='confirm'>Confirm Password</label>
           <input
             type='password'
@@ -87,7 +87,7 @@ export default function RegisterForm({ setWelcome, welcome }) {
         </div>
         <div className='my-1 mx-auto'>
           <button
-            className='btn hover:bg-green-400  border-green-400 text-black border'
+            className='btn hover:bg-green-400 rounded border-green-400 text-black border p-2'
             type='submit'>
             Register
           </button>
