@@ -27,7 +27,7 @@ export default function LandingPage() {
           <LoginForm />
         </section>
         <section id='login' className='login'>
-          <RegisterForm />
+          <RegisterForm setToggleForm={setToggleForm} />
         </section>
         <div>
           {toggleForm ? (

@@ -16,7 +16,7 @@ export default function LoginForm() {
 
     const userObj = { email, password };
 
-    fetch('https://jitter-api.herokuapp.com/login', {
+    fetch('https://jitter-api.herokuapp.com/user/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ export default function LoginForm() {
           localStorage.setItem('token', data.token);
           // Update authState in App.js
           // setToken(data.token);
-          history.push('/loading');
+          history.push('/home');
         }
       })
       .catch((err) => {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function RegisterForm({ setWelcome, welcome }) {
+export default function RegisterForm(setToggleForm) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirm, setConfirm] = useState('');
@@ -38,7 +38,7 @@ export default function RegisterForm({ setWelcome, welcome }) {
         } else {
           setError('');
           setMessage('Account Created!');
-          setWelcome(!welcome);
+          setToggleForm(true);
         }
       })
       .catch((error) => {
