@@ -14,17 +14,25 @@ body,
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 .sidecar {
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
-  padding: 10px;
-  margin: 10px;
-  width: 20%;
-  height: 100%;
   border: black solid 2px;
-  border-radius: 1em;
-  box-sizing: border-box;
+  padding: 10px;
+}
+.main-feed {
+  flex-direction: column;
+  flex-grow: 2;
+  border: black solid 2px;
+  padding: 10px;
+}
+
+.sideGroup {
+  flex-direction: column;
+  flex-grow: 1;
+  border: black solid 2px;
+  padding: 10px;
 }
 .title {
   text-align: center;
@@ -35,41 +43,16 @@ body,
 .sideCont {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  height: 80%;
-  margin-bottom: 2em;
+  justify-content: space-evenly;
 }
 .mainCont {
   display: flex;
-  box-sizing: border-box;
-  width: 100%;
-  height: 80%;
-  border: solid black 2px;
-  margin: 10px;
-}
-
-.main-feed {
-  flex-direction: column;
-  width: 50%;
-  height: 100%;
-  border: black solid 2px;
-  padding: 10px;
-  margin: 10px;
-}
-
-.sideGroup {
-  flex-direction: column;
-  padding: 10px;
-  margin: 10px;
-  width: 30%;
-  height: 100%;
-  border: black solid 2px;
+  width: 100vw;
+  height: 100vh;
 }
 
 .feed-card {
   flex-direction: column;
-  height: 100px;
   border: black solid 2px;
   border-radius: 1em;
   padding: 10px;
